@@ -1,0 +1,28 @@
+/* pages/components/userList/userList.wxss */
+.user_item{
+  height: 152rpx;
+  padding: 0 11rpx 0 33rpx;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-flow: nowrap row;
+}
+.user_item_ava{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 14rpx;
+}
+.user_item_text{
+  border-bottom: solid 1rpx #E6E6E6;
+  padding-bottom: 28rpx;
+  width: 76%;
+}
+.user_item_name{
+  color: #666666;
+  font-size: 30rpx;
+}
+.user_item_signature{
+  color: #999999;
+  font-size: 26rpx;
+}

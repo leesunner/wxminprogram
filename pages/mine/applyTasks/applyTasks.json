@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "processBlock":"/pages/components/processBlock/processBlock",
+    "lee_scrollView":"/pages/components/scrollView/scrollView",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "申请详情"
+}

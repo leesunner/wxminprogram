@@ -1,0 +1,40 @@
+/* pages/mine/myInfos/myInfos.wxss */
+.my_list{
+  padding: 20rpx 36rpx;
+  background-color: #ffffff;
+  border-bottom: solid 1rpx #F8F8F8;
+  position: relative;
+}
+.my_list_title{
+  color: #666666;
+  width: 75%;
+  font-size: 30rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 6rpx;
+}
+.my_list_time{
+  color: #B3B3B3;
+  font-size: 30rpx;
+}
+.my_list_status{
+  position: absolute;
+  top: 20rpx;
+  right: 80rpx;
+  padding: 5rpx 20rpx;
+  font-size: 22rpx;
+  border-radius: 4rpx;
+  color: #FF9933;
+  background-color: rgba(225,128,0,.12);
+}
+.my_list_statusG{
+  position: absolute;
+  top: 20rpx;
+  right: 80rpx;
+  padding: 5rpx 20rpx;
+  font-size: 22rpx;
+  border-radius: 4rpx;
+  color: #33B475;
+  background-color: rgba(51,180,118,.12);
+}

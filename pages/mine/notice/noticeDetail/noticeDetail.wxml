@@ -1,0 +1,21 @@
+<!--pages/mine/notice/noticeDetail.wxml-->
+<view class="notice_boxs">
+	<view class="notice_title">
+		<view class="notice_title_title">{{content?content.procDefName:'暂无内容'}}</view>
+		<view class="notice_title_time">{{content?content.taskName:'暂无内容'}}</view>
+	</view>
+	<view class="notice_content">
+		<view class="notice_content_item" wx:for="{{content.content}}" wx:key="index">
+			<text>
+			{{item.title}}：
+			</text>
+			<text>
+			{{item.content}}
+			</text>
+		</view>
+	</view>
+  <view>
+   <view class="notice_title_time timer_ad">开始时间：{{content.startTime}}</view>
+    <view class="notice_title_time timer_ad">结束时间：{{content.endTime}}</view>
+  </view>
+</view>

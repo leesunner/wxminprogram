@@ -1,0 +1,73 @@
+/* pages/mine/settings/editProfile/editProfile.wxss */
+.content{
+  padding: 40rpx 30rpx 0 40rpx;
+}
+.headimg{
+  text-align: center;
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 48rpx;
+}
+.st{
+  margin-top: 16rpx;
+}
+.item{
+  font-size: 30rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+  color: #666666;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: nowrap row;
+}
+.item label{
+  margin-right: 46rpx;
+  display: block;
+  width:160rpx;
+}
+.input{
+  min-width:450rpx;
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #666666;
+  border-bottom: solid 1rpx #E6E6E6;
+}
+.input input{
+  min-height: 90rpx;
+}
+.picker{
+  height: 90rpx;
+  width: 420rpx;
+}
+picker{
+  height: 90rpx;
+  min-width: 140rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8rpx;
+}
+.pickerArea{
+  height: 90rpx;
+  min-width: 140rpx;
+}
+.showAreas{
+  min-height: 90rpx;
+  width: 420rpx;
+  padding-top: 14rpx;
+  line-height: 45rpx;
+  border-bottom: solid 1rpx #E6E6E6;
+}
+.confirm{
+  min-width: 100%;
+  height: 90rpx;
+  background-color: #E42419;
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 80rpx;
+  border:none;
+  padding: 0 0;
+  line-height: 90rpx;
+}
+

@@ -1,0 +1,5 @@
+<!--pages/components/uploadFile/uploadFile.wxml-->
+<view class="file" bindtap="uploadFiles">
+	<image src="../../../utils/image/upf.png" class="icon"></image>
+	<text class="text">{{text}}</text>
+</view>

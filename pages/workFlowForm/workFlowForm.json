@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "uploadImage":"/pages/components/uploadImage/uploadImage",
+    "uploadFile":"/pages/components/uploadFile/uploadFile",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationStyle":"custom",
+  "navigationBarTitleText": "表单详情"
+}

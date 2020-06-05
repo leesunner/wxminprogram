@@ -1,0 +1,4 @@
+<!--pages/mine/settings/aboutPlat/aboutPlat.wxml-->
+<view class="s_label">
+    <labelMark  wx:for="{{list}}" wx:key="index" text="{{item.text}}" url="{{item.url}}"></labelMark>
+</view>

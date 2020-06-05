@@ -1,0 +1,11 @@
+<!--pages/components/labelMark/labelMark.wxml-->
+<view class="labelm" bindtap="goPage">
+<view class="leftx">
+  <image class="icon" wx:if="{{!(icon==''||icon==null)}}" src="{{icon}}"></image>
+  <text class="title">{{text}}</text>
+</view>
+<view class="slotm">
+  <slot></slot>
+  <image class="jto" src="../../../utils/image/xjti@2x.png" wx:if="{{isShow}}"></image>
+</view>
+</view>

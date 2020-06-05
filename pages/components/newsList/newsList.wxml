@@ -1,0 +1,22 @@
+<!--pages/components/newslist/newsList.wxml-->
+<view class="l_item" wx:for="{{articleList}}" wx:key="index" data-id="{{item.id}}" bindtap="goNewsDetail">
+			<view class="art_tu">
+				<image src="{{item.image}}" class="art_tu" lazy-load mode="cover"></image>
+			</view>
+			<view>
+				<view class="art_info">
+					<!-- <image class="art_g" src="../../../utils/image/guo.png" wx:if="{{item.type==1}}"></image>
+					<image class="art_x" src="../../../utils/image/xian630@2x.png" wx:elif="{{item.type==2}}"></image>
+					<image class="art_x" src="../../../utils/image/xin.png" wx:else></image> -->
+					<text class="tar_type">
+						{{item.shortName}}
+					</text>
+						{{item.title}}
+				</view>
+				<view class="art_aur">
+					<view>{{item.author}}</view>
+					<view>{{item.createTimeCn}}</view>
+					<view>{{item.hits}}阅读</view>
+				</view>
+			</view>
+		</view>

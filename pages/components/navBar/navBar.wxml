@@ -1,0 +1,11 @@
+<!--pages/components/navBar/navBar.wxml-->
+<cover-view class="navbar" style='height:{{navHeight}}px;'>
+  <cover-view class="navbar_box" style='height:{{navHeight}}px;background-color:{{backgroundColor}};padding-top:{{navTop}}px;'>
+    <cover-view class="navbar_content" style='height:{{navConHg}}px;line-height:{{navConHg}}px;'>
+        <cover-view wx:if="{{showBack}}" class="navbar_back" bindtap="navBackTo">
+          <cover-image src="../../../utils/image/back002.png" class="navbar_back_nav"></cover-image>
+        </cover-view>
+        {{navTitle}}
+    </cover-view>
+  </cover-view>
+</cover-view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "useAccount": "/pages/components/usesAccount/usesAccount",
+    "usePhone": "/pages/components/usePhone/usePhone",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "登录"
+}

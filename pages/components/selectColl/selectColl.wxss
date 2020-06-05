@@ -1,0 +1,44 @@
+/* pages/components/selectColl/selectColl.wxss */
+.coll{
+  height: 120rpx;
+  border-bottom:solid 1rpx #e4e4e4;
+  padding: 21rpx 50rpx 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+.coll-text{
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+.coll-title{
+  font-size: 30rpx;
+  color: #666;
+}
+.coll-time{
+  font-size: 24rpx;
+  color: #B3B3B3;
+  margin-top: 6rpx;
+}
+.coll-btn{
+  height: 44rpx;
+  font-size: 22rpx;
+  border: solid 1rpx #00A253;
+  padding: 7rpx  20rpx;
+  color: #00A253;
+}
+.gray{
+  color: #CCCCCC;
+  border: solid 1rpx #CCCCCC;
+}
+.red{
+  color: #E42419;
+  border: solid 1rpx #E42419;
+}
+.yellow{
+  color: #FF8000;
+  border: solid 1rpx #FF8000;
+}

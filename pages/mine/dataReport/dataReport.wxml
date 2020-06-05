@@ -1,0 +1,75 @@
+<!--pages/mine/dataReport/dataReport.wxml-->
+<view class="datareport">
+	<view class="datareport_tab dereport_flex">
+		<view class="{{index==selectTab?'active':'datareport_tab_item'}}" wx:for="{{tablist}}" wx:key="index" bindtap="chooseTab" data-index="{{index}}" style="{{'width:'+(100/tablist.length)+'%;'}}">
+			{{item}}
+		</view>
+	</view>
+	<view class="pie_item">
+		<view class="datareport_num dereport_flex">
+			<view class="datareport_num_item">
+				<view>已办结</view>
+				<view>
+					<text class="c_blue vert_bot">{{workFlowNum.done}}</text>
+					<text class="vert_bot">件</text>
+				</view>
+			</view>
+			<view class="datareport_num_item">
+				<view>未办结</view>
+				<view>
+					<text class="c_yellow vert_bot">{{workFlowNum.notDone}}</text>
+						<text class="vert_bot">件</text>
+				</view>
+			</view>
+			<view class="datareport_num_item">
+				<view>逾期已办结</view>
+				<view>
+					<text class="c_blueg vert_bot">{{workFlowNum.overdueDone}}</text>
+						<text class="vert_bot">件</text>
+				</view>
+			</view>
+			<view class="datareport_num_item">
+				<view>逾期未办结</view>
+				<view>
+					<text class="c_yellowg vert_bot">{{workFlowNum.overdueNotDone}}</text>
+					<text class="vert_bot">件</text>
+				</view>
+			</view>
+		</view>
+		<view class="data_r">
+			<ec-pie data="{{worksFisList}}"></ec-pie>
+		</view>
+		<view class="tips_pie">提示：图形显示了我的业务办理情况发布</view>
+	</view>
+	<view class="pie_item">
+		<view class="datareport_tab dereport_flex">
+			<view class="{{index==selectTabWorkNum?'active':'datareport_tab_item'}}" wx:for="{{WorkNumTab}}" wx:key="index" bindtap="chooseWorkNumTab" data-index="{{index}}" style="{{'width:'+(100/WorkNumTab.length)+'%;'}}">
+				{{item}}
+			</view>
+		</view>
+		<view class="data_r">
+			<view class="allWorkNum_title">
+				<text>总事项数量: </text>
+				<text class="c_yellowg">{{allWorkNum.cwCount+allWorkNum.dwCount+allWorkNum.swCount}}</text>
+				<text>件</text>
+			</view>
+			<ec-pie data="{{selectTabWorkNum==0?allWorkNumList:allWorkNumListTab2}}" colors="{{allWorkNumListColors}}"></ec-pie>
+		</view>
+		<view class="tips_pie">提示：图形显示了我参与的，所有业务属类发布</view>
+	</view>
+	<view class="top_five">
+		<image class="jt" src="../../../utils/image/jtdbx7@2x.png"></image>
+		<text>我的热门业务 TOP5 排行榜</text>
+	</view>
+	<view class="pie_item">
+		<view wx:for="{{topfivePie.businessName}}" wx:key="index" class="pie_item_label">
+			<view class="{{'pie_item_label_index colorindex'+index}}">{{'0'+(index+1)}}</view>
+			<text>{{item}}</text>
+		</view>
+    <view class="data_r">
+        <ec-pie data="{{topFivelist}}" colors="{{topFiveColor}}" lengend="{{false}}"></ec-pie>
+    </view>
+		<view class="tips_pie">提示：图形显示了我发起的，并已办理完的所有业务发布</view>
+	</view>
+  <view class="tips">本数据最终解释权归《百问数字政务数据中心》所有</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "usePhone": "/pages/components/usePhone/usePhone",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "注册"
+}

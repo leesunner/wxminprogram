@@ -1,0 +1,38 @@
+/* pages/components/searchBox/searchBox.wxss */
+/*总高 height:104rpx */
+.searchinput{
+  border-bottom: solid 10rpx #F2F2F2;
+  padding: 18rpx 60rpx;
+  background-color: #ffffff;
+}
+.search{
+  width: 100%;
+  background-color: #F2F2F2;
+  border-radius: 27rpx;
+  position: relative;
+  padding-left: 26rpx;
+}
+.search input{
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  font-size: 28rpx;
+  height: 72rpx;
+  color: #666666;
+}
+.icon{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 6rpx;
+}
+.cancel{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 20rpx;
+  bottom: 0;
+  right: 14rpx;
+  z-index: 10;
+}

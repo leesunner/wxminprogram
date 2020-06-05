@@ -1,0 +1,44 @@
+/* pages/components/tabBar/tabBar.wxss */
+
+.tabbar{
+  height: 80rpx;
+  background-color: #fff;
+  overflow: scroll;
+}
+.tabitem_ul{
+  height: 80rpx;
+  position: relative;
+  white-space: nowrap;
+}
+.tabitem_ul_flex{
+  display: flex;
+  align-items: center;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  position: relative;
+  height: 80rpx;
+  padding: 0 60rpx;
+}
+.tabitem{
+  color: rgb(7, 4, 4);
+  font-size: 30rpx;
+  text-align: center;
+  height: 76rpx;
+  line-height: 76rpx;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 30rpx;
+}
+.tabitem_ul_flex .tabitem{
+  min-width: 136rpx;
+  padding: 0;
+}
+.tabitem text{
+    color: #666666;
+    font-size: 30rpx;
+}
+.tabitem .tabColor{
+  color: #E42419;
+  padding-bottom: 12rpx;
+  border-bottom: solid 2rpx #E42419;
+}

@@ -1,0 +1,21 @@
+<!--pages/mine/notice/sendNotice/sendNotice.wxml-->
+<view class="content">
+	<form bindsubmit="sendInfo">
+		<view class="vont">
+			<view class="label">
+				<view class="tab">标题：</view>
+				<!-- 文本输入 -->
+				<input name="contactWay" placeholder="请输入标题" placeholder-class="gay"></input>
+			</view>
+			<view class="label">
+				<!-- 长文本输入 -->
+				<view class="tab">公告内容：</view>
+				<textarea name="content" placeholder="请输入公告内容" placeholder-class="gay"></textarea>
+			</view>
+		</view>
+		<view class="btn">
+			<button formType="submit" class="submit">确认发布</button>
+		</view>
+	</form>
+
+</view>

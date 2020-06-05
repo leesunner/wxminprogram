@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/partyWork/partyWork",
+    "pages/bussineWork/bussineWork",
+    "pages/financeWork/financeWork",
+    "pages/mine/mine",
+    "pages/workList/workList",
+    "pages/workFlowForm/workFlowForm",
+    "pages/mine/notice/notice",
+    "pages/mine/feedback/feedback",
+    "pages/mine/notice/sendNotice/sendNotice",
+    "pages/mine/applyTasks/applyTasks",
+    "pages/mine/endTasks/endTasks",
+    "pages/newsDetail/newsDetail",
+    "pages/regester/regester",
+    "pages/mine/settings/settings",
+    "pages/mine/settings/account/account",
+    "pages/mine/settings/updatePassword/updatePassword",
+    "pages/mine/settings/updateTelephone/updateTelephone",
+    "pages/mine/settings/aboutPlat/aboutPlat",
+    "pages/mine/settings/aboutPlat/userTreaty/userTreaty",
+    "pages/mine/settings/aboutPlat/privacyPolicy/privacyPolicy",
+    "pages/mine/settings/editProfile/editProfile",
+    "pages/searchPage/searchPage",
+    "pages/mine/notice/noticeDetail/noticeDetail",
+    "pages/mine/dataReport/dataReport",
+    "pages/mine/myInfos/myInfos",
+    "pages/mine/myInfos/myInfosDetail/myInfosDetail",
+    "pages/appraise/appraise"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E42419",
+    "navigationBarTitleText": "数字政务",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#E42419",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./utils/image/sy.png",
+        "selectedIconPath": "./utils/image/sys.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/partyWork/partyWork",
+        "text": "党务",
+        "iconPath": "./utils/image/dw.png",
+        "selectedIconPath": "./utils/image/dws.png"
+      },
+      {
+        "pagePath": "pages/bussineWork/bussineWork",
+        "text": "事务",
+        "iconPath": "./utils/image/sw.png",
+        "selectedIconPath": "./utils/image/sws.png"
+      },
+      {
+        "pagePath": "pages/financeWork/financeWork",
+        "text": "财务",
+        "iconPath": "./utils/image/cw.png",
+        "selectedIconPath": "./utils/image/cws.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./utils/image/md.png",
+        "selectedIconPath": "./utils/image/mds.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,32 @@
+<!--pages/mine/endTasks/endTasks.wxml-->
+<wxs module="fillters" src="./../../../utils/fillters.wxs" />
+<view class="content">
+<text wx:if="{{showControl}}" class="load">表单加载中....</text>
+<form wx:else>
+	<view wx:for="{{formList}}" wx:key="index" class="list">
+      <view wx:if="{{item.formType!='buttons'}}" class="label">
+      	<label wx:show="{{item.formNotNull==true}}" class="{{item.formNotNull==true?'star':''}}">*</label>
+			  <label>{{item.formTitle}}：</label>
+      </view>
+      <!-- 只读文本 -->
+			<input name="{{item.formId}}" wx:if="{{item.formType=='label'}}" disabled value="{{item.formDefaultValue}}"></input>
+      <!-- 只读长文本 -->
+			<textarea name="{{item.formId}}" wx:if="{{item.formType=='lLabel'}}" value="{{item.formDefaultValue}}" disabled></textarea>
+      <!-- 日期选择 -->
+			<picker wx:if="{{item.formType=='date'}}" name="{{item.formId}}" mode="date" header-text="选择日期" start="1990-01-01" end="2100-12-31" value="{{item.formDefaultValue}}" disabled bindchange="bindChangeValue" data-item="{{index}}">
+       <view class="select">当前选中：{{item.formDefaultValue}}</view>
+      </picker>
+      <!-- 下拉选择 -->
+			<picker wx:if="{{item.formType=='combox'}}" disabled name="{{item.formId}}" header-text="请选择" range="{{item.formComboxValue}}" data-item="{{index}}" bindchange="bindChangeValue" value="{{item.formDefaultValue}}">
+      <view class="select">当前选中：{{item.formComboxValue[item.formDefaultValue]}}</view>
+      </picker>
+      <!-- 图片展示 -->
+      <image src="{{itemc.url}}" wx:if="{{item.formType=='imageShow'}}" wx:for="{{item.formDefaultValue}}"  wx:for-item="itemc" wx:for-index="indexc" wx:key="indexc" class="showImage" lazy-load></image>
+      <!-- 文件下载 -->
+      <view wx:if="{{item.formType=='fileDownload'}}" class="file">
+       <image src="../../../utils/image/upf.png" class="icon"></image>
+       <text>点击下载</text>
+      </view>
+		</view>
+    </form>
+</view>

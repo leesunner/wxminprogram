@@ -1,0 +1,24 @@
+<!--pages/mine/myInfos/myInfos.wxml-->
+<wxs module="fillters" src="./../../../utils/fillters.wxs" />
+<view>
+<searchBox bindonSearch="getList"></searchBox>
+  <lee_scrollView scHeight="{{88}}"  canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+  <view>
+    <view wx:if="{{list.length>0}}">
+      <view class="my_list" wx:for="{{list}}" bindtap="goNoticeDetail" wx:key="index" data-id="{{item.id}}">
+        <view class="my_list_title">
+        {{item.title}}
+        </view>
+        <view class="my_list_time">
+          {{fillters.formatTime(item.createDate)}}
+        </view>
+        <view class="{{item.readStatus?'my_list_statusG':'my_list_status'}}">
+        {{item.readStatus?'已读':'未读'}}
+        </view>
+      </view>
+    </view>
+    <blank-tip wx:if="{{list.length<0&&showBlank}}" text="{{'暂无消息'}}"></blank-tip>
+  </view>
+ </lee_scrollView>
+</view>
+

@@ -1,0 +1,7 @@
+<view>
+	<image class="par_img" src="http://gsxk.oss-cn-beijing.aliyuncs.com//feedback_images/202001171044116478523.png"></image>
+	<view>
+		<click-icon data_list="{{list}}">
+		</click-icon>
+	</view>
+</view>

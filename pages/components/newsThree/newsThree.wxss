@@ -1,0 +1,50 @@
+/* pages/components/newsThree/newsThree.wxss */
+.newsThree{
+  padding: 30rpx 17rpx 20rpx 26rpx;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+}
+.newsThree_title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #666666;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: nowrap row;
+}
+.newsThree_img{
+  margin: 20rpx 0;
+}
+.newsThree_img image{
+  display: block;
+  height: 140rpx;
+  width: 32%;
+}
+.newsThree_btn{
+
+}
+.newsThree_btn_text{
+  width: 70%;
+}
+.newsThree_btn_text text{
+  font-size:24rpx;
+  color:#B3B3B3;
+}
+
+.newsThree_btn_del{
+  padding: 8rpx 18rpx;
+  height: 32rpx;
+  border: solid 1rpx #B3B3B3;
+  border-radius: 16rpx;
+}
+.newsThree_btn_del image{
+  display: block;
+  width: 15rpx;
+  height: 15rpx;
+}

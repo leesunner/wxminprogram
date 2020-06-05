@@ -1,0 +1,4 @@
+/* pages/mine/applyTasks/applyTasks.wxss */
+.applyTasks{
+  padding: 26rpx 30rpx;
+}

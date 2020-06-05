@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "searchBox": "/pages/components/searchBox/searchBox",
+    "blank-tip": "/pages/components/blankIcon/blankIcon",
+    "tabBar":"/pages/components/tabBar/tabBar",
+    "newsList":"/pages/components/newsList/newsList",
+    "scrollView":"/pages/components/scrollView/scrollView",
+    "newsThree":"/pages/components/newsThree/newsThree",
+    "newsMore":"/pages/components/newsMore/newsMore",
+    "lee_scrollView":"/pages/components/scrollView/scrollView",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "首页"
+}

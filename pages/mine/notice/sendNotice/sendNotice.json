@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "发布公告"
+}

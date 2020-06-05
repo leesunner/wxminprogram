@@ -1,0 +1,25 @@
+/* pages/components/titleTip/titleTip.wxss */
+.tsertitle{
+  height: 84rpx;
+  border-bottom: solid 1rpx #E6E6E6;
+  padding: 0 45rpx;
+}
+.tflex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: nowrap row;
+}
+.tsertitle_left{
+  font-size: 32rpx;
+  color: #666666;
+}
+.tsertitle_btn{
+  font-size: 30rpx;
+  color: #B3B3B3;
+}
+.tsertitle_jio{
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 24rpx;
+}

@@ -1,0 +1,8 @@
+<!--pages/components/tabBar/tabBar.wxml-->
+<scroll-view  class="tabbar" scroll-x="true" scroll-left="{{scrollNum}}" scroll-anchoring bindscroll="bindscroll" scroll-with-animation>
+		<view id="box" class="{{showFlex?'tabitem_ul_flex':'tabitem_ul'}}" style="{{showFlex?'':('min-width:'+tababarwidth)}}">
+			<view wx:for="{{list}}" class="tabitem" wx:key="index" data-index="{{index}}" data-id="{{item.id}}" bindtap="selectTab">
+			<text class="{{tabSelect==index?'tabColor':''}}">{{item.name}}</text>
+			</view>
+		</view>
+	</scroll-view>

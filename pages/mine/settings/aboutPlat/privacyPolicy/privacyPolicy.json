@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "隐私协议"
+}

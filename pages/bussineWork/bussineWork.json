@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "click-icon": "/pages/components/clickIcon/clickIcon",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "事务"
+}

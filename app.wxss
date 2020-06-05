@@ -1,0 +1,15 @@
+/**app.wxss**/
+view,cover-view{
+  box-sizing: border-box;
+}
+button{
+  border: solid 1rpx #999999;
+  color: #E42419;
+  font-size: 30rpx;
+  border-radius: 4rpx;
+}
+.hidetext{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}

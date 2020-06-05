@@ -1,0 +1,31 @@
+/* pages/components/clickIcon/clickIcon.wxss */
+.content{
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.item{
+  height: 192rpx;
+  width: 33.333333333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32rpx 12rpx 0 12rpx;
+  text-align: center;
+}
+.image{
+  width: 99rpx;
+  height: 99rpx;
+  margin-bottom: 23rpx;
+}
+.text{
+  display: block;
+  width: 100%;
+  color: #666666;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}

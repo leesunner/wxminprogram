@@ -1,0 +1,54 @@
+/* pages/mine/notice/sendNotice/sendNotice.wxss */
+.content{
+  font-size: 30rpx;
+  color: #666666;
+}
+.vont{
+  padding: 30rpx 30rpx;
+  overflow: hidden;
+}
+.label{
+  margin-bottom: 46rpx;
+}
+.label:nth-child(2){
+  padding-bottom: 40rpx;
+  border-bottom: solid 1rpx #E6E6E6;
+}
+.tab{
+  margin-bottom: 20rpx;
+}
+.label input,textarea{
+  display: block;
+  border:solid 1rpx #B3B3B3;
+  height: 80rpx;
+  width: auto;
+}
+.label input{
+  padding-left: 26rpx;
+}
+.label textarea{
+  height:250rpx;
+  padding:19rpx 26rpx;
+}
+.btn{
+  position: fixed;
+  z-index: 100;
+  bottom:0;
+  width: 100%;
+}
+.submit{
+  height: 90rpx;
+  color: #fff;
+  font-size: 30rpx;
+  border:none;
+  border-radius: 0;
+  padding: 0 0;
+  line-height: 90rpx;
+  background-color: #FF8000;
+}
+.btn button{
+  min-width: 100%;
+}
+.gay{
+  color: #E6E6E6;
+}

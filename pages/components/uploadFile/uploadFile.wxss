@@ -1,0 +1,19 @@
+/* pages/components/uploadFile/uploadFile.wxss */
+.file{
+  width: 280rpx;
+  height: 100rpx;
+  color: #FF8000;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #EDEDED;
+}
+.icon{
+  width: 46rpx;
+  height: 46rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+.text{
+  font-size: 28rpx;
+  color: #666666;
+}

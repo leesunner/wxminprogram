@@ -1,0 +1,9 @@
+<!--pages/components/searchBox/searchBox.wxml-->
+ <view class="searchinput">
+  <view class="search" style="{{'text-align:'+fontPosition+';'}}">
+  <image src="../../../utils/image/s1344@2x.png" class="icon"></image>
+      <input placeholder="请输入您要搜索的内容" bindconfirm="onSearch" value="{{inputValue}}" bindinput="inputInfo" focus="{{focus}}">
+      </input>
+  <image wx:if="{{inputValue}}" src="../../../utils/image/647@2x.png" class="cancel" bindtap="cancel"></image>
+  </view>
+  </view>

@@ -1,0 +1,64 @@
+<!--pages/searchPage/searchPage.wxml-->
+<view>
+	<searchBox bindonSearch="confirmSearch" bindonHistory="onHistory" fontPosition="left" openStr="{{true}}" focus="{{true}}" words="{{searchWord}}" tabSelect="{{tabType}}"></searchBox>
+	<view wx:if="{{!searchWord}}">
+		<view class="defalutBox">
+			<view class="title">
+				<text>热门搜索</text>
+			</view>
+			<view class="searchlist">
+				<text wx:for="{{hotList}}" wx:key="index" bindtap="getWordSearch" data-word="{{item}}">{{item}}</text>
+			</view>
+		</view>
+		<view class="defalutBox" wx:if="{{historyList.length>0}}">
+			<view class="title">
+				<text>历史搜索</text>
+			</view>
+			<view class="searchlist">
+				<text wx:for="{{historyList}}" wx:key="index" bindtap="getWordSearch" data-word="{{item}}">{{item}}</text>
+				<!-- <text wx:else>还没有任何搜索记录，赶快吧</text> -->
+			</view>
+		</view>
+	</view>
+	<view wx:else>
+		<view>
+				<tabBar bindtabChange="tabChange" list="{{tabList}}" id="tabBarObj"></tabBar>
+		</view>
+		<!-- 综合列表 -->
+		<lee_scrollView wx:if="{{tabType==1}}" scHeight="{{184}}" canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+			<view class="searchContent">
+				<view wx:if="{{allList.articleList.length>0||allList.indexUserList.length>0}}">
+					<titleTip title="用户" bindonCallback="onCallbackUser" bindonCallb="getUserList"></titleTip>
+					<view wx:if="{{allList.indexUserList.length>0}}">
+						<userList usersList="{{allList.indexUserList}}"></userList>
+					</view>
+					<view class="searchNewsBox">
+						<titleTip title="内容" bindonCallb="getContentList"  bindonCallback="onCallbackContent"></titleTip>
+					</view>
+					<view wx:if="{{allList.articleList.length>0}}">
+						<newsList articleList="{{allList.articleList}}"></newsList>
+					</view>
+				</view>
+				<blank-tip text="没有找到相关内容，换个词试试吧~" wx:if="{{allList.articleList.length<1&&allList.indexUserList.length<1&&showBlank}}"></blank-tip>
+			</view>
+		</lee_scrollView>
+		<!-- 内容列表 -->
+		<lee_scrollView wx:if="{{tabType==2}}" scHeight="{{184}}" canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+			<view class="searchContent">
+				<view wx:if="{{contentList.length>0}}">
+					<newsList articleList="{{contentList}}"></newsList>
+				</view>
+				<blank-tip text="没有找到相关内容，换个词试试吧~" wx:if="{{contentList.length<1&&showBlank}}"></blank-tip>
+			</view>
+		</lee_scrollView>
+		<!-- 用户列表 -->
+		<lee_scrollView wx:if="{{tabType==3}}" scHeight="{{184}}" canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+			<view class="searchContent">
+				<view wx:if="{{usersList.length>0}}">
+					<userList usersList="{{usersList}}"></userList>
+				</view>
+				<blank-tip text="没有找到相关内容，换个词试试吧~" wx:if="{{usersList.length<1&&showBlank}}"></blank-tip>
+			</view>
+		</lee_scrollView>
+	</view>
+</view>

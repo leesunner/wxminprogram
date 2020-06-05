@@ -1,0 +1,9 @@
+<!--pages/components/newsMore/newsMore.wxml-->
+<view class="moreNews">
+  <view class="moreNews_img">
+  <image src="http://gsxk.oss-cn-beijing.aliyuncs.com//article_images/202001101005391376350.jpg"></image>
+  <view class="text">权威发布</view>
+  </view>
+  <view class="moreNews_title">杨云彦要求共同开创湖北省民族乡镇发展新局面，并通过相关媒体已发布重要通告！</view>
+  <view class="moreNews_btn">查看更多</view>
+</view>

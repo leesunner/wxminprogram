@@ -1,0 +1,65 @@
+/* pages/components/newslist/newsList.wxss */
+
+.l_item {
+  box-sizing: content-box;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 180rpx;
+  padding: 26rpx 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.art_tu {
+  display: block;
+  width: 240rpx;
+  height: 180rpx;
+  margin-right: 24rpx;
+}
+
+.art_g {
+  width: 60rpx;
+  height: 36rpx;
+  vertical-align: middle;
+}
+
+.art_x {
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: middle;
+}
+
+.art_info {
+  font-size: 30rpx;
+  color: #666666;
+  height: 130rpx;
+  margin-bottom: 11rpx;
+  text-overflow: -o-ellipsis-lastline;
+  word-break:break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.art_aur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: nowrap row;
+  color: #B3B3B3;
+  font-size: 24rpx;
+}
+.tar_type{
+  display: inline-block;
+  height: 36rpx;
+  text-align: center;
+  line-height: 12rpx;
+  background-color: #E42419;
+  color: #ffffff;
+  font-size: 24rpx;
+  padding:0 8rpx;
+  vertical-align: top;
+}

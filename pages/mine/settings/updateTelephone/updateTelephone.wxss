@@ -1,0 +1,87 @@
+/* pages/mine/settings/updateTelephone/updateTelephone.wxss */
+.content{
+  padding: 49rpx 70rpx;
+}
+.teltext{
+  text-align: center;
+  font-size: 30rpx;
+}
+.teltext text{
+  color: #666666;
+}
+.teltext view{
+  color: #B3B3B3;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 11rpx;
+}
+label{
+  display: block;
+  color: #666666;
+  font-size: 30rpx;
+  width: 150rpx;
+  margin-right: 16rpx;
+}
+.plh{
+  color: #E6E6E6;
+  font-size: 26rpx;
+}
+.input{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.telinput{
+  margin-top: 55rpx;
+}
+.telinput input{
+  min-width: 460rpx;
+}
+.codeinput{
+margin-top: 64rpx;
+}
+.codeinput input{
+  min-width: 249rpx;
+}
+input{
+  display: block;
+  border-bottom: solid 1rpx #999999;
+  width: auto;
+  font-size: 30rpx;
+  color: #666666;
+}
+.btn-area{
+  min-width: 100%;
+  height: 90rpx;
+  background-color: #E42419;
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 120rpx;
+  margin-bottom: 30rpx;
+  border:none;
+  padding: 0 0;
+  line-height: 90rpx;
+  text-align: center;
+}
+.codein{
+  width: 38%;
+}
+.input .second{
+  position: absolute;
+  right: 0;
+  top: -18rpx;
+  height: 70rpx;
+  font-size: 24rpx;
+  border:none;
+  box-sizing: border-box;
+  border-radius: 4rpx;
+  min-width: 160rpx;
+  width: 180rpx;
+  text-align: center;
+  padding:4rpx 8rpx;
+  line-height: 70rpx;
+  background-color: #E42419;
+  color: #ffffff;
+}

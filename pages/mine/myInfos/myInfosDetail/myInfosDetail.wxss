@@ -1,0 +1,25 @@
+/* pages/mine/myInfos/myInfosDetail/myInfosDetail.wxss */
+.no_det{
+  padding: 30rpx  53rpx;
+  background-color: #ffffff;
+  color: #666666;
+  font-size: 30rpx;
+}
+.no_det_title{
+ margin-top: 50rpx;
+ margin-bottom: 80rpx; 
+}
+.no_det_cont{
+ color: #B3B3B3; 
+}
+.no_det_bm{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 90rpx;
+  color: #B3B3B3; 
+}
+.no_det_red{
+  color: #E42419;
+  margin-right: 100rpx;
+}

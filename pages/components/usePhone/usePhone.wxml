@@ -1,0 +1,25 @@
+<!--pages/components/usePhone/usePhone.wxml-->
+<view>
+<form bindsubmit="formSubmit">
+		<view class="input">
+			<label>手机号：</label>
+      <input placeholder="请输入手机号" bindinput="inputTelChange" focus name="telephone" placeholder-class="plh"></input>
+		</view>
+		<view class="input">
+			<label>验证码：</label>
+      <input placeholder="请输入验证码" name="verificationCode" value="{{verificationCode}}" placeholder-class="plh" class="codein" bindinput="inputCodeChange"></input>
+      <button class="second" loading="{{loading}}" disabled="{{disabled}}" bindtap="sendCode">{{codeText>0?(codeText+
+          'S'):codeText}}</button>
+		</view>
+		<view>
+			<button formType="submit" wx:if="{{type==2||type==4}}" disabled="{{verificationCode==''||telephone==''}}" class="btn-area">{{type==4?'下一步':'确认'}}</button>
+      <button formType="submit"  open-type="getUserInfo" disabled="{{verificationCode==''||telephone==''}}" class="btn-area" wx:else>{{type==1?'登录':'确认'}}</button>
+		</view>
+    <view class="text" wx:if="{{!(type==4||type==1)}}">
+      <text>{{type==2?'绑定':'注册'}}即代表你同意 </text>
+      <text  class="text_red">《用户协议》 </text>
+      <text>和</text>
+      <text  class="text_red">《隐私政策》</text>
+    </view>
+	</form>
+</view>

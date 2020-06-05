@@ -1,0 +1,8 @@
+<!--pages/components/userList/userList.wxml-->
+<view class="user_item" wx:for="{{usersList}}" wx:key="index" bindtap="goUserDetail" data-name="{{item.username}}">
+  <image src="{{item.avatar?item.avatar:'../../../utils/image/toux@2x.png'}}" class="user_item_ava"></image>
+  <view class="user_item_text">
+  <view class="user_item_name">{{item.username}}</view>
+   <view class="user_item_signature">{{item.signature?item.signature:''}}</view>
+  </view>
+</view>

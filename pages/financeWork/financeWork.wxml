@@ -1,0 +1,8 @@
+<!--pages/financeWork/financeWork.wxml-->
+<view>
+	<image class="par_img" lazy-load src="http://gsxk.oss-cn-beijing.aliyuncs.com//feedback_images/202001171044476481929.png"></image>
+	<view>
+		<click-icon data_list="{{list}}">
+		</click-icon>
+	</view>
+</view>

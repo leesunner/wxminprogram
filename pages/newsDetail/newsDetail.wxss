@@ -1,0 +1,7 @@
+/* pages/newsDetail/newsDetail.wxss */
+@import "../../utils/wxParse/wxParse.wxss";
+.details{
+  padding:24rpx 30rpx;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}

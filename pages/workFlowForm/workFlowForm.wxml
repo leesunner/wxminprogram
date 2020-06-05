@@ -1,0 +1,63 @@
+<!--pages/workFlowForm/workFlowForm.wxml-->
+<wxs module="fillters" src="./../../utils/fillters.wxs" />
+<navBar navTitle="表单信息" customNavBack="{{true}}" bindnavCustom="inquiryBtn"></navBar>
+<view class="content">
+<text wx:if="{{showControl}}" class="load">表单加载中....</text>
+<form bindsubmit="formSubmit" wx:else>
+	<view wx:for="{{formList}}" wx:key="index" class="list">
+      <view wx:if="{{item.formType!='buttons'}}" class="label">
+      	<label wx:show="{{item.formNotNull==true}}" class="{{item.formNotNull==true?'star':''}}">*</label>
+			  <label>{{item.formTitle}}：</label>
+      </view>
+      <!-- 文本输入 -->
+			<input name="{{item.formId}}" value="{{item.formDefaultValue}}" wx:if="{{item.formType=='text'}}"></input>
+      <!-- 只读文本 -->
+			<input name="{{item.formId}}" wx:if="{{item.formType=='label'}}" disabled value="{{item.formDefaultValue}}"></input>
+      <!-- 长文本输入 -->
+			<textarea name="{{item.formId}}" value="{{item.formDefaultValue}}" wx:if="{{item.formType=='lText'}}"></textarea>
+      <!-- 只读长文本 -->
+			<textarea name="{{item.formId}}" wx:if="{{item.formType=='lLabel'}}" value="{{item.formDefaultValue}}" disabled></textarea>
+      <!-- 日期选择 -->
+			<picker wx:if="{{item.formType=='date'}}" name="{{item.formId}}" mode="date" header-text="选择日期" start="1990-01-01" end="2100-12-31" value="{{item.formDefaultValue}}" bindchange="bindChangeValue" data-item="{{index}}">
+       <view class="select">当前选中：{{item.formDefaultValue}}</view>
+      </picker>
+      <!-- 下拉选择 -->
+			<picker wx:if="{{item.formType=='combox'}}" name="{{item.formId}}" header-text="请选择" range="{{item.formComboxValue}}" data-item="{{index}}" bindchange="bindChangeValue" value="{{item.formDefaultValue}}">
+      <view class="select">当前选中：{{item.formComboxValue[item.formDefaultValue]}}</view>
+      </picker>
+      <!-- 图片展示 -->
+      <image src="{{itemc.url}}" bindtap="previewImage" wx:if="{{item.formType=='imageShow'}}" wx:for="{{item.formDefaultValue}}"  wx:for-item="itemc" wx:for-index="indexc" data-urls="{{item.formDefaultValue}}" wx:key="indexc" class="showImage" lazy-load></image>
+      <!-- 图片上传 -->
+      <view wx:if="{{item.formType=='image'}}">
+        <uploadImage bindonSucees="uploadImage"></uploadImage>
+      </view>
+      <!-- 文件上传 -->
+      <view wx:if="{{item.formType=='file'}}">
+        <uploadFile binduploadFile="onSucees"></uploadFile>
+      </view>
+      <!-- 文件下载 -->
+      <view wx:if="{{item.formType=='fileDownload'}}">
+      <view class="file" wx:for="{{item.formDefaultValue}}"  wx:for-item="itemc" wx:for-index="indexc" wx:key="indexc" data-url="{{itemc.url}}" bindtap="downLoadFile">
+        <text>{{itemc.name}}</text>
+        <image src="../../utils/image/upf.png" class="icon"></image>
+        <text>点击下载</text>
+      </view>
+      </view>
+      
+      <view wx:if="{{item.formType=='buttons'}}"  class="buttons">
+      <button formType="submit" data-inface="{{itemc.url}}"  wx:for="{{item.formDefaultValue}}" wx:for-item="itemc" wx:for-index="indexc" wx:key="indexc" class="{{fillters.jsonTs(item.formDefaultValue,'ln')<2?'obtn':''}}">{{itemc.name}}</button>
+      </view>
+		</view>
+    <!-- 弹框 -->
+      <view class="dkDralog" wx:if="{{showDraglog}}" catchtouchmove="catchtouchmove">
+          <view class="dkDralog_box">
+            <view class="dkDralog_box_title">提示</view>
+            <view class="dkDralog_con">是否保存为草稿</view>
+            <view class="dkDralog_btn">
+              <button class="dkDralog_btn_one" bindtap="cancels">取消</button>
+              <button formType="submit" data-drag="{{true}}" class="dkDralog_btn_two">确认</button>
+            </view>
+          </view>
+      </view>
+    </form>
+</view>

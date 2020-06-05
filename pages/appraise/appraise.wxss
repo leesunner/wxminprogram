@@ -1,0 +1,93 @@
+/* pages/appraise/appraise.wxss */
+.content{
+  font-size: 30rpx;
+  color: #666666;
+}
+.ap_vont{
+  padding: 40rpx 45rpx;
+  overflow: hidden;
+}
+.ap_label{
+  margin-bottom: 46rpx;
+  position: relative;
+}
+.ap_label:nth-child(2){
+  padding-bottom: 40rpx;
+}
+.ap_tab{
+  margin-bottom: 20rpx;
+}
+.ap_label textarea{
+  display: block;
+  border:solid 1rpx #B3B3B3;
+  height: 80rpx;
+  width: auto;
+}
+.ap_label input{
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 26rpx;
+  min-width: 400rpx;
+}
+.ap_label textarea{
+  height:250rpx;
+  padding:19rpx 26rpx;
+}
+.tab_inline{
+  display: inline-block;
+  vertical-align: middle;
+  width: 170rpx;
+}
+.ap_btn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80rpx;
+  width: 100%;
+}
+.ap_btn button{
+  border:none;
+  height: 80rpx;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  width: 100%;
+  border-radius: 0;
+  padding: 0 0;
+  background-color: #E42419;
+  min-width: 100%;
+}
+.gay{
+  color: #E6E6E6;
+}
+.stars{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 16rpx;
+  color: #B3B3B3;
+  font-size: 30rpx;
+}
+.showContent{
+  color: #B3B3B3;
+  font-size: 30rpx;
+}
+.stars image{
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 18rpx;
+  width: 53rpx;
+  height: 51rpx;
+}
+.ap_text{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  height: 51rpx;
+  line-height: 51rpx;
+  width: 160rpx;
+  padding-left: 16rpx;
+  text-align: left;
+  color: #B3B3B3;
+  font-size: 26rpx;
+}

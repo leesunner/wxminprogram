@@ -1,0 +1,32 @@
+/* pages/components/navBar/navBar.wxss */
+.navbar{
+  position: relative;
+}
+.navbar_box{
+  position: fixed;
+  z-index: 888;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.navbar_content{
+  text-align: center;
+  color: #ffffff;
+  font-size: 32rpx;
+  position: relative;
+}
+.navbar_back{
+  position: absolute;
+  z-index: 889;
+  width: 54px;
+  left:10rpx;
+  text-align: center;
+  height: inherit;
+  line-height: inherit;
+}
+.navbar_back_nav{
+  display: inline-block;
+  vertical-align: middle;
+  width: 22rpx;
+  height: 41rpx;
+}

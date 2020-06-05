@@ -1,0 +1,7 @@
+/* pages/mine/settings/aboutPlat/userTreaty/userTreaty.wxss */
+.text{
+  color: #B3B3B3;
+  font-size: 28rpx;
+  padding: 26rpx 39rpx;
+  -webkit-overflow-scrolling: touch;
+}

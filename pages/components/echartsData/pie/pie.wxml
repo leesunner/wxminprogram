@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<!--真机调试时ec-canvas加上这个属性，使用旧版api，可查看canvas ，线上时去掉force-use-old-canvas="true" -->
+<view class="container">
+  <ec-canvas id="mychart-dom-pie" 
+  canvas-id="mychart-pie"
+   ec="{{ ec }}"></ec-canvas>
+  <view class="kbcn" wx:if="{{data.length<1}}">
+  暂无数据
+  </view>
+</view>

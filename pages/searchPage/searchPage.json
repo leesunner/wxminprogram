@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "searchBox": "/pages/components/searchBox/searchBox",
+    "blank-tip": "/pages/components/blankIcon/blankIcon",
+    "tabBar":"/pages/components/tabBar/tabBar",
+    "userList":"/pages/components/userList/userList",
+    "newsList":"/pages/components/newsList/newsList",
+    "titleTip":"/pages/components/titleTip/titleTip",
+    "lee_scrollView":"/pages/components/scrollView/scrollView",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "搜索页"
+}

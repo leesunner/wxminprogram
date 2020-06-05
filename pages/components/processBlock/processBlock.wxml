@@ -1,0 +1,19 @@
+<!--pages/components/processBlock/processBlock.wxml-->
+<wxs module="fillters" src="./../../../utils/fillters.wxs" />
+<view class="processBox" wx:for="{{list}}" wx:key="index">
+	<view class="{{index==(list.length-1)?'processBox_left processBox_leftd':'processBox_left'}}">
+    <view class="processBox_dot"></view>
+	</view>
+	<view class="processBox_right">
+		<view class="processBox_item">时间：{{fillters.formatTime(item.createTime)}}</view>
+		<view class="processBox_box">
+      <view class="processBox_item">名称：{{item.name}}</view>
+      <view class="processBox_item">经办人：{{item.realName}}</view>
+      <view class="processBox_item">状态：{{item.status}}</view>
+			<view class="processBox_box_btn" wx:if="{{item.state=='1'}}" bindtap="goToAppraise" data-status="{{item.commentStatus}}" data-id="{{item.id}}">
+			<image src="{{item.commentStatus?'../../../utils/image/lookp@2x.png':'../../../utils/image/golp@2x.png'}}"></image>
+			<text>{{item.commentStatus?'查看评论':'评论'}}</text>
+			</view>
+		</view>
+	</view>
+</view>

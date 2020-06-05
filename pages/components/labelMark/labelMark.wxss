@@ -1,0 +1,35 @@
+/* pages/components/labelMark/labelMark.wxss */
+.labelm{
+  height: 100rpx;
+  padding: 0 56rpx 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: nowrap row;
+  border: solid 1rpx #F8F8F8;
+  background-color: #fff;
+}
+.title{
+  color: #666666;
+  font-size: 30rpx;
+  vertical-align: middle;
+}
+.slotm{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: nowrap row;
+}
+.slotm .jto{
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 24rpx;
+}
+.icon{
+  width: 54rpx;
+  height: 54rpx;
+  margin-right: 9rpx;
+  margin-left: 16rpx;
+  display: inline-block;
+  vertical-align: middle;
+}

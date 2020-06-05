@@ -1,0 +1,17 @@
+<!--pages/components/usesAccount/usesAccount.wxml-->
+<view>
+<form bindsubmit="formSubmit">
+		<view class="input">
+			<label>用户名：</label>
+			<input placeholder="请输入用户名" focus name="username" placeholder-class="plh" bindinput="inputUChange"></input>
+		</view>
+		<view class="input">
+			<label>密码：</label>
+			<input placeholder="请输入密码" password name="password" placeholder-class="plh" bindinput="inputPChange"></input>
+		</view>
+		<view>
+			<button formType="submit" wx:if="{{type==2}}" class="btn-area" disabled="{{username==''||password==''}}">确定</button>
+			<button formType="submit" open-type="getUserInfo" class="btn-area" disabled="{{username==''||password==''}}" wx:else>{{type==1?'登录':'确定'}}</button>
+		</view>
+	</form>
+</view>

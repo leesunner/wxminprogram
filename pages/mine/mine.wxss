@@ -1,0 +1,122 @@
+/* pages/mine/mine.wxss */
+.content{
+  -webkit-overflow-scrolling: touch;
+  background-color: #F8F8F8;
+}
+.m_bac{
+  overflow: hidden;
+}
+.bor_rau{
+  border: solid 1rpx #E6E6E6;
+  border-radius: 6rpx;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+}
+.flexb{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+.m_bitem text{
+  color: #666666;
+  font-size: 30rpx;
+}
+.m_login{
+  height: 200rpx;
+  margin: 56rpx 40rpx 20rpx  40rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #666666;
+}
+.toux{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 24rpx;
+  margin-left: 34rpx;
+}
+.m_info{
+  margin: 16rpx 0;
+}
+
+.image_add{
+  width: 110rpx;
+  height: 110rpx;
+}
+.rez{
+  width: 160rpx;
+  color: #666666;
+}
+.rezicon{
+  width: 150rpx;
+  text-align: left;
+  color: #FF8000;
+  font-size: 26rpx;
+  margin-top: 14rpx;
+}
+.rezicond{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  color: #999999;
+  font-size: 26rpx;
+  margin-top: 14rpx;
+  width: 150rpx;
+}
+.yrzicon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 4rpx;
+}
+.rezed{
+  border: solid 1rpx #00A253;
+  padding: 8rpx 20rpx;
+  text-align: center;
+  color: #00A253;
+  border-radius: 26rpx;
+  margin-top: 6rpx;
+}
+.datas{
+  width: 240rpx;
+  text-align: center;
+  color: #0099F7;
+  font-size: 30rpx;
+  margin-right: 32rpx;
+}
+.buttons{
+  width: 240rpx;
+  height: 56rpx;
+  color: #ffffff;
+  background-color: #0099F7;
+  font-size: 28rpx;
+  margin-top:18rpx;
+  border-radius: 6rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  padding: 0 42rpx;
+}
+.buttons image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 12rpx;
+}
+.notice{
+  width: 54rpx;
+  height: 54rpx;
+  position: fixed;
+  right: 14rpx;
+  top: 25%;
+  background-color: #E42419;
+}
+.notice image{
+  display: block;
+  width: 54rpx;
+  height: 54rpx;
+}

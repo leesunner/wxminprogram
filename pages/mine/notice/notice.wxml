@@ -1,0 +1,16 @@
+<!--pages/mine/notice/notice.wxml-->
+<wxs module="fillters" src="./../../../utils/fillters.wxs" />
+<view>
+  <searchBox bindonSearch="getList"></searchBox>
+  <lee_scrollView scHeight="{{168}}"  canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+  <view>
+    <view class="li" wx:for="{{list}}" wx:key="index" catchtap="goNoticeDetail" data-reportid="{{item.id}}">
+    <text class="title hidetext">{{item.taskName}}</text>
+    <text class="time">{{item.startTime}}</text>
+    </view>
+     <blank-tip  wx:if="{{list.length<1&&showController}}" text="{{'暂无公告信息'}}"></blank-tip>
+  </view>
+  </lee_scrollView>
+  <view wx:if="{{noticeState}}" class="btn" bindtap="sendNotice">发布公告</view>
+</view>
+

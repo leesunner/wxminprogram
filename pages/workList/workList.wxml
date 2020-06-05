@@ -1,0 +1,19 @@
+<!--pages/workList/workList.wxml-->
+<wxs module="fillters" src="./../../utils/fillters.wxs" />
+<view class="worklist">
+  <searchBox bindonSearch="getListByType"></searchBox>
+  <lee_scrollView scHeight="{{78}}"  canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+  <view>
+    <select-collpase 
+    wx:for="{{list}}" 
+    wx:key="index" 
+    type="{{type}}"
+    myStatus="{{item.stateName+'&$&'+item.state}}"
+    workCode="{{item.taskId?item.taskId:item.actProcInstId}}"
+    time="{{fillters.formatTime(item.createTime)}}"
+    name="{{item.name?item.name:item.businessName}}">
+    </select-collpase>
+    <blank-tip  wx:if="{{list.length<1&&showController}}" text="{{type==1?'您目前没有待办事项':type==2?'您还未处理任何事项':type==3?'您目前没有进行任何申请':'您目前没有保存草稿信息'}}"></blank-tip>
+  </view>
+  </lee_scrollView>
+</view>

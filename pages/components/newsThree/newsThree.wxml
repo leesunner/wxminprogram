@@ -1,0 +1,19 @@
+<!--pages/components/newsThree/newsThree.wxml-->
+<view class="newsThree" data-id="{{item.id}}" bindtap="goNewsDetail" wx:for="{{articleList}}" wx:key="index">
+	<view class="newsThree_title">{{item.title}}</view>
+	<view class="newsThree_img flex">
+  <image src="{{item.image}}"></image>
+  <image src="{{item.image}}"></image>
+  <image src="{{item.image}}"></image>
+	</view>
+	<view class="newsThree_btn flex">
+		<view class="newsThree_btn_text flex">
+			<text>{{item.author}}</text>
+			<text>{{item.createTimeCn}}</text>
+			<text>{{item.hits}}阅读</text>
+		</view>
+		<view class="newsThree_btn_del" catchtap="deleteContent" data-id="{{item.id}}" data-index="{{index}}">
+			<image src="../../../utils/image/deleltes@2x.png"></image>
+		</view>
+	</view>
+</view>

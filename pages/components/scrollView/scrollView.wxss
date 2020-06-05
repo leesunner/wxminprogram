@@ -1,0 +1,11 @@
+/* pages/components/scrollView/scrollView.wxss */
+.loadmore{
+  margin-top: 24rpx;
+  margin-bottom: 24rpx;
+  text-align: center;
+  color: #666666;
+  font-size: 26rpx;
+}
+.redmore{
+  color: #E42419;
+}

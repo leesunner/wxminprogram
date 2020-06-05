@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+	<!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+	<view catchtap="onsearch">
+		<searchBox></searchBox>
+	</view>
+	<tabBar list="{{categoriesList}}" bindtabChange="tabChange"></tabBar>
+	<lee_scrollView scHeight="{{280}}" canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+	<view class="swiper">
+		<swiper indicator-dots autoplay="" interval="3000" duration="300" indicator-color="rgba(255,255,255,.35)" indicator-active-color="rgba(228, 36, 25, .68)">
+			<block wx:for="{{bannerList}}" wx:key="index">
+				<swiper-item>
+					<view class="banner_box">
+						<image class="banner" src="{{item.imgUrl}}" lazy-load mode="cover" catchtap="bindViewTap" data-url="{{item.contentUrl}}"></image>
+						<!-- <view class="re_text"  wx:if="{{index==0}}" catchtap="bindGoNotice" data-url="{{item.contentUrl}}">
+							<view class="re_title">公告</view>
+							<view class="re_content">
+								这是一段公告公示示例
+							</view>
+						</view> -->
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="list" wx:if="{{articleList.length>0}}">
+		<newsList articleList="{{articleList}}"></newsList>
+		<!-- <view class="morenewsitem">
+			<view class="morenewsitem_left">
+				<newsMore></newsMore>
+			</view>
+			<view class="morenewsitem_right">
+				<newsMore></newsMore>
+			</view>
+		</view> -->
+		<!-- 三图新闻 -->
+		<newsThree articleList="{{articleList}}" binddeleteArticle="deleteArticle"></newsThree>
+	</view>
+	<view wx:if="{{articleList.length<1&&showBlank}}">
+		<blank-tip></blank-tip>
+	</view>
+	</lee_scrollView>
+	<!-- 屏蔽理由 弹框 -->
+	<view wx:if="{{deleteDailog}}" catchtouchmove="catchtouchmove" class="deleteDrag" bindtap="deleteConfirms" data-type="2">
+		<view class="deleteDrag_box">
+			<view class="deleteDrag_box_title flex">
+				<text>可选理由,精准屏蔽</text>
+				<view catchtap="deleteConfirms"  data-type="1">不感兴趣</view>
+			</view>
+			<view class="flex deleteDrag_box_item">
+				<view class="{{item.choose?'chooseItem':''}}" wx:for="{{reasonList}}" wx:key="index" data-index="{{index}}" catchtap="deleteRes">{{item.text}}</view>
+			</view>
+		</view>
+	</view>
+</view>

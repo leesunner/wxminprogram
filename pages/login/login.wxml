@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+	<image src="../../utils/image/szlogo.png" class="logo"></image>
+	<useAccount wx:if="{{longinTpye==1}}"></useAccount>
+	<usePhone wx:else></usePhone>
+	<view>
+		<button class="btn-reg" bindtap="goReg">注册</button>
+		<view class="text">
+			<text bindtap="goPass">忘记密码</text>
+			<text class="center">|</text>
+			<text bindtap="changeWay">{{longinTpye==1?'手机号登录':'账户登录'}}</text>
+		</view>
+	</view>
+</view>

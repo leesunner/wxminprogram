@@ -1,0 +1,7 @@
+<!--pages/components/clickIcon/clickIcon.wxml-->
+<view class="content">
+	<view wx:for="{{data_list}}" wx:key="index" class="item">
+		<image lazy-load src="{{item.icon}}" data-url="{{item.url}}" data-page="{{item.pageUrl}}" catchtap="goPage" class="image ~image_add"></image>
+		<text class="text">{{item.menuName}}</text>
+	</view>
+</view>

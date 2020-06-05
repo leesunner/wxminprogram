@@ -1,0 +1,8 @@
+<!--pages/components/titleTip/titleTip.wxml-->
+<view class="tsertitle tflex">
+	<text class="tsertitle_left">{{title}}</text>
+	<view class="tflex" bindtap="goPage">
+		<text class="tsertitle_btn">{{content}}</text>
+		<image class="tsertitle_jio" src="../../../utils/image/xjti@2x.png"></image>
+	</view>
+</view>

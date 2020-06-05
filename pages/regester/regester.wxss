@@ -1,0 +1,4 @@
+/* pages/regester/regester.wxss */
+.content{
+  padding: 49rpx 70rpx;
+}

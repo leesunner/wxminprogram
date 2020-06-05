@@ -1,0 +1,15 @@
+<!--pages/mine/myInfos/myInfosDetail/myInfosDetail.wxml-->
+<wxs module="fillters" src="./../../../../utils/fillters.wxs" />
+<view class="no_det">
+<view class="no_det_title">{{details.title}}</view>
+<view>消息内容：</view>
+<view class="no_det_cont">
+{{details.content}}
+</view>
+<view class="no_det_bm">
+<view>
+接收人：{{details.name}}<text  class="no_det_red">dadad</text>
+</view>
+<text>{{details.time}}</text>
+</view>
+</view>

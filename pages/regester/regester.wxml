@@ -1,0 +1,4 @@
+<!--pages/regester/regester.wxml-->
+<view class="content">
+	<usePhone type="3"></usePhone>
+</view>

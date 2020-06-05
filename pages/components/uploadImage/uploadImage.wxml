@@ -1,0 +1,9 @@
+<!--pages/components/uploadImage/uploadImage.wxml-->
+<view class="imgup" catchtap="uploadImages" style="{{showIcon?'':'background-color: transparent;'}}">
+  <view wx:if="{{showIcon}}">
+    <image src="../../../utils/image/upimg.png" class="icon"></image>
+    <view class="text">{{text}}</view>
+  </view>
+  <view class="fullimg" style="{{'background-image: url('+url+');'}}" wx:else>
+  </view>
+</view>

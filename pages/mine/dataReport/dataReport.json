@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ec-pie": "/pages/components/echartsData/pie/pie",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "backgroundColor": "#0d0d43",
+  "navigationBarTitleText": "数据报告"
+}

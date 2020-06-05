@@ -1,0 +1,5 @@
+/* pages/partyWork/partyWork.wxss */
+.par_img{
+  height: 340rpx;
+  width: 100%;
+}

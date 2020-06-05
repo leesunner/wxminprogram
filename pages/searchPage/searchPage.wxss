@@ -1,0 +1,35 @@
+/* pages/searchPage/searchPage.wxss */
+.defalutBox{
+  padding: 38rpx 38rpx;
+}
+.title{
+  margin-bottom: 18rpx;
+  text-align: left;
+  height: 48rpx;
+  line-height: 48rpx;
+  position: relative;
+}
+.title text{
+  color: #666666;
+  font-size: 34rpx;
+}
+.searchlist{
+  padding: 18rpx 0;
+}
+.searchlist text{
+  color: #B3B3B3;
+  font-size: 30rpx;
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 12rpx;
+}
+.searchContent{
+  border-top: solid 20rpx #F7F7F7;
+  padding: 26rpx 26rpx;
+}
+.searchNewsBox{
+  border-top: solid 20rpx #F7F7F7;
+  margin-bottom: 26rpx;
+}

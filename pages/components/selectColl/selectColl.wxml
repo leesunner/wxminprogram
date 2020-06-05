@@ -1,0 +1,8 @@
+<!--pages/components/selectColl/selectColl.wxml-->
+<view catchtap="goWorkFlow" class="coll">
+	<view class="coll-text">
+		<view class="coll-title">{{name}}</view>
+		<view class="coll-time">{{time}}</view>
+	</view>
+	<view class="{{ type==1?'coll-btn':type==2?'coll-btn gray':state==0?'coll-btn red':state==1?'coll-btn gray':'coll-btn yellow'}}">{{type==1?"待审查":type==2?"已办理":type==3?stateName:'待完善'}}</view>
+</view>

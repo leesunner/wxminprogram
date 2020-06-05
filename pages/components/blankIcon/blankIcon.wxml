@@ -1,0 +1,5 @@
+<!--pages/components/blankIcon/blankIcon.wxml-->
+<view class="tip">
+    <image src="../../../utils/image/kkon.png" class="konba"></image>
+    <text class="tip_text">{{text}}</text>
+</view>

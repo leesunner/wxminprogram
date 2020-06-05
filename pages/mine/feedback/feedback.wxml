@@ -1,0 +1,29 @@
+<!--pages/mine/feedback/feedback.wxml-->
+<view class="content">
+<form bindsubmit="sendInfo">
+<view class="vont">
+      <view class="label">
+       <!-- 长文本输入 -->
+			  <view class="tab">问题和意见：</view>
+        <textarea name="content" placeholder="请输入您的意见或问题" placeholder-class="gay"></textarea>
+      </view>
+      <view class="label">
+       <!-- 图片上传 -->
+			  <view class="tab">图片（选填，提供问题截图）：</view>
+        <view class="imgup" catchtap="uploadImages" name="images">
+          <image src="../../../utils/image/upimg.png" ></image>
+          <view>图片上传</view>
+        </view>
+      </view>
+       <view class="label">
+       <view class="tab">联系方式：微信/邮箱（选填）：</view>
+		 <!-- 文本输入 -->
+			<input name="contactWay" placeholder="请输入您的联系方式" placeholder-class="gay"></input>
+       </view>
+  </view>
+  <view class="btn">
+   <button formType="submit" class="submit">提交反馈</button>
+    </view>
+    </form>
+ 
+</view>

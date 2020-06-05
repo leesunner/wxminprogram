@@ -1,0 +1,7 @@
+<!--pages/mine/settings/settings.wxml-->
+<view class="setting">
+  <view wx:for="{{list}}" wx:key="index" class="s_label">
+    <labelMark text="{{item.text}}" url="{{item.url}}"></labelMark>
+  </view>
+  <view class="loginout" bindtap="loginout">退出登录</view>
+</view>

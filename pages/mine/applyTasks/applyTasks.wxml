@@ -1,0 +1,6 @@
+<!--pages/mine/applyTasks/applyTasks.wxml-->
+<lee_scrollView scHeight="{{168}}" canGetMore="{{canGetMore}}" bottomMore="{{bottomMore}}" contentRefresher="{{contentRefresher}}" bindrefresherpull="refresherpull" bindscrolltolower="scrolltolower">
+<view class="applyTasks">
+		<processBlock list="{{list}}"></processBlock>
+</view>
+</lee_scrollView>

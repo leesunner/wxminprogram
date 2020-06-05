@@ -1,0 +1,8 @@
+<!--pages/mine/settings/account/account.wxml-->
+<view class="setting">
+  <view wx:for="{{list}}" wx:key="index">
+    <labelMark text="{{item.text}}" url="{{item.url}}">
+      <text class="tel" wx:if="{{index<1}}">{{telphone?telphone:'暂未绑定手机号'}}</text>
+    </labelMark>
+  </view>
+</view>

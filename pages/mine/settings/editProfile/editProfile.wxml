@@ -1,0 +1,89 @@
+<!--pages/mine/settings/editProfile/editProfile.wxml-->
+<view class="content">
+  <view class="headimg">
+    <uploadImage bindonSuccess="uploadImage" text="上传头像" url="{{userInfos.avatar}}" showIcon="{{false}}"></uploadImage>
+    <view wx:if="{{userInfos.avatar}}" class="st">上传头像</view>
+  </view>
+  <form class="forms" bindsubmit="submitForm">
+    <view class="item">
+      <label>昵称:</label>
+      <view class="input">
+      <input name="nickname" placeholder="随便来点刺激的" bindinput="inputNickname" value="{{userInfos.nickname}}"></input>
+      </view>
+    </view>
+    <view class="item">
+      <label>性别:</label>
+      <view class="input">
+      <picker bindchange="bindSexChange" name="sex" range-key="value" value="{{userInfos.sex}}" range="{{sexArray}}">
+        <view class="picker">
+          {{sexArray[userInfos.sex]?sexArray[userInfos.sex].value:'请选择'}}
+        </view>
+      </picker>
+      </view>
+    </view>
+    <view class="item">
+    <label>生日:</label>
+    <view class="input">
+    <picker name="birthday" value="{{userInfos.birthday}}" mode="date" header-text="选择日期" start="1940-01-01" end="2100-12-31" bindchange="bindDateChange">
+       <view class="picker">{{userInfos.birthday?userInfos.birthday:'请选择日期'}}</view>
+      </picker>
+      </view>
+    </view>
+    <view class="item">
+      <label>地区:</label>
+      <!-- 显示地址 -->
+      <picker wx:if="{{userInfos.provinceName&&!selectAreas}}" bindchange="bindprovince" name="provinceCode" value="{{provinceData.index}}" range="{{provinceArray}}" range-key="locationName">
+         <view class="showAreas">{{userInfos.provinceName+userInfos.cityName+userInfos.districtName+userInfos.townName+userInfos.villageName}}</view>
+      </picker>
+     <!-- picker显示 -->
+      <view class="input" wx:else>
+      <picker bindchange="bindprovince" name="provinceCode" value="{{provinceData.index}}" range="{{provinceArray}}" range-key="locationName">
+        <view class="pickerArea">
+          {{provinceArray[provinceData.index]?provinceArray[provinceData.index].locationName:'省'}}
+        </view>
+      </picker>
+      <picker bindchange="bindcity" name="cityCode" value="{{cityData.index}}" range="{{cityArray}}" range-key="locationName">
+        <view class="pickerArea">
+          {{cityArray[cityData.index]?cityArray[cityData.index].locationName:'市'}}
+        </view>
+      </picker>
+      <picker bindchange="binddistrict" name="districtCode" value="{{districtData.index}}" range="{{districtArray}}" range-key="locationName">
+        <view class="pickerArea">
+          {{districtArray[districtData.index]?districtArray[districtData.index].locationName:'区/县'}}
+        </view>
+      </picker>
+      </view>
+    </view>
+    <!-- 村级选择显示 -->
+    <view class="item" wx:if="{{selectAreas}}">
+      <label></label>
+     <!-- picker显示 -->
+      <view class="input">
+      <picker bindchange="bindTwon" name="townCode" value="{{townData.index}}" range="{{townArray}}" range-key="locationName">
+        <view class="pickerArea">
+          {{townArray[townData.index]?townArray[townData.index].locationName:'街道/乡/镇'}}
+        </view>
+      </picker>
+      <picker bindchange="bindVillage" name="villageCode" value="{{villageData.index}}" range="{{villageArray}}" range-key="locationName">
+        <view class="pickerArea">
+          {{villageArray[villageData.index]?villageArray[villageData.index].locationName:'社区/村'}}
+        </view>
+      </picker>
+      </view>
+    </view>
+
+    <view class="item">
+      <label>签名:</label>
+      <view class="input">
+      <input name="autograph" bindinput="inputAutograph" value="{{userInfos.autograph}}" placeholder="宝宝还没有想好写什么~"></input>
+      </view>
+    </view>
+    <view class="item">
+      <label>实名认证:</label>
+      <text>{{'未认证'}}</text>
+    </view>
+    <view>
+    <button formType="submit" class="confirm">提交修改</button>
+    </view>
+  </form>
+</view>

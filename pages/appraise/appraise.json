@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationStyle":"custom",
+  "navigationBarTitleText": "评论"
+}

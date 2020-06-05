@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "blank-tip": "/pages/components/blankIcon/blankIcon",
+    "searchBox": "/pages/components/searchBox/searchBox",
+    "lee_scrollView":"/pages/components/scrollView/scrollView",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "消息中心"
+}

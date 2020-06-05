@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "labelMark": "/pages/components/labelMark/labelMark",
+    "navBar":"/pages/components/navBar/navBar"
+  },
+  "navigationBarTitleText": "设置"
+}

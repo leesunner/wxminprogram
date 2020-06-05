@@ -1,0 +1,37 @@
+<!--pages/components/scrollView/scrollView.wxml-->
+<!-- <wxs module="refresh">
+module.exports = {
+  onPulling: function(evt, instance) {
+    var p = Math.min(evt.detail.dy / 80, 1)
+    var view = instance.selectComponent('.refresh-container')
+    view.setStyle({
+      opacity: 0,
+			transform: "scale(" + p + ")"
+    })
+  }
+}
+</wxs> -->
+<scroll-view style="min-height:376px;"
+scroll-y
+scroll-with-animation
+refresher-threshold="{{100}}"
+scroll-anchoring
+refresher-enabled ="{{true}}"
+refresher-background="{{colors}}" 
+refresher-default-style="white" 
+refresher-triggered="{{contentRefresher}}" 
+bindscrolltolower="bindscrolltolower" 
+bindrefresherrefresh="bindrefresherpull">
+<!-- <view slot="refresher" class="refresh-container"
+    style="display: block; width: 100%; height: 80px; background: blue; display: flex; align-items: center;"
+  >
+    <view class="view1" style="position: absolute; text-align: center; width: 100%;">
+      下拉刷新
+    </view>
+  </view> -->
+	<view style="{{'height:'+boxHeight+'rpx;'}}">
+		<slot></slot>
+		<view class="loadmore redmore" hidden="{{bottomMore}}">加载中，请稍后...</view>
+		<view class="loadmore" hidden="{{!canGetMore}}">没有更多数据了</view>
+	</view>
+</scroll-view>

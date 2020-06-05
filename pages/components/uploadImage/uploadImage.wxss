@@ -1,0 +1,30 @@
+/* pages/components/uploadImage/uploadImage.wxss */
+.imgup{
+  width: 200rpx;
+  height: 200rpx;
+  color: #B3B3B3;
+  text-align: center;
+  background-color: #EDEDED;
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon{
+  width: 52rpx;
+  height: 52rpx;
+  margin-top: 40rpx;
+  margin-bottom: 27rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+.text{
+  font-size: 28rpx;
+  color: #666666;
+  text-align: center;
+}
+.fullimg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: inherit;
+  height: inherit;
+}

@@ -1,0 +1,11 @@
+/* pages/mine/settings/account/account.wxss */
+.setting{
+  background-color: #F8F8F8;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.tel{
+  font-size: 30rpx;
+  color: #B3B3B3;
+}

@@ -1,0 +1,4 @@
+/* pages/workList/workList.wxss */
+.worklist{
+  -webkit-overflow-scrolling: touch;
+}

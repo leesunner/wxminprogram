@@ -1,0 +1,16 @@
+/* pages/components/blankIcon/blankIcon.wxss */
+.tip{
+  text-align: center;
+}
+.konba{
+  display: block;
+  width: 260rpx;
+  height: 260rpx;
+  margin: 0 auto;
+  margin-top: 123rpx;
+}
+.tip_text{
+  color: #B3B3B3;
+  font-size: 28rpx;
+  margin-top: 55rpx;
+}

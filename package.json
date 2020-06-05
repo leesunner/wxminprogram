@@ -1,0 +1,20 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "百问数字政务小程序\r ============================\r #开发中.....",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/national_digital/ndit-xcx.git"
+  },
+  "keywords": [],
+  "author": "leesun",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.3.0"
+  },
+  "devDependencies": {}
+}
